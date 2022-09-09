@@ -1,0 +1,6 @@
+/* MEDIA QUERIES */
+@mixin desktop{
+    @media screen and (min-width: $desktop-size) {
+        @content
+    }
+}

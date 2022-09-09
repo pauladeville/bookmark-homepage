@@ -9,17 +9,25 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Bookmark landing page</title>
   </head>
   <body>
     <main>
       <nav>
+        <div class="nav-icons">
+          <img src="images/logo-bookmark.svg" alt="" />
+          <button id="burger">
+            <span class="bar"></span>
+          </button>
+        </div>
         <ul>
           <li>Features</li>
           <li>Pricing</li>
           <li>Contact</li>
-          <li>Login</li>
+          <button>
+            <a href="#">Login</a>
+          </button>
         </ul>
       </nav>
 
@@ -196,13 +204,14 @@
         </div>
         <div class="social">
           <a href="#">
-            <img src="images/icon-facebook.svg" alt="">
+            <img src="images/icon-facebook.svg" alt="" />
           </a>
           <a href="#">
-            <img src="images/icon-twitter.svg" alt="">
+            <img src="images/icon-twitter.svg" alt="" />
           </a>
         </div>
       </footer>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>
