@@ -8,3 +8,10 @@ $very-dark-blue: hsl(229, 31%, 21%);
 
 /* MEDIA QUERIES */
 $desktop-size:900px;
+
+/* PADDING */
+$paddingX:(
+  wide:10%,
+  small:8%,
+  mini:6%
+);

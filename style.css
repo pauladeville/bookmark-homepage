@@ -1,7 +1,9 @@
 /* PRIMARY */
 /* NEUTRAL */
 /* MEDIA QUERIES */
+/* PADDING */
 /* MEDIA QUERIES */
+/* SHADOWS */
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
 * {
   padding: 0;
@@ -16,59 +18,180 @@ a {
   text-decoration: none;
 }
 
+section {
+  padding: 25px 8%;
+  text-align: center;
+}
+
 * {
   font-family: "Rubik";
 }
 
-p, a, input, .newsletter p {
+input,
+.newsletter p {
   font-size: 18px;
 }
 
-nav {
+p,
+.cta__button,
+.cta__button--soft {
+  font-size: 15px;
+  line-height: 25px;
+  color: hsl(229deg, 8%, 60%);
+  text-align: center;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h1, h2, h3 {
+  color: hsl(229deg, 31%, 21%);
+  text-align: center;
+}
+
+h2 {
+  font-size: 22px;
+  padding: 15px;
+}
+
+h3 {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.cta__button {
+  padding: 8px 18px;
+  background-color: hsl(231deg, 69%, 60%);
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 2px hsl(231deg, 69%, 60%) solid;
+  margin: 6px;
+  display: inline-block;
+  box-shadow: 0 6px 10px #d4d9f7;
+  transition: background-color 300ms ease-in-out;
+}
+.cta__button:hover {
+  background-color: white;
+  color: hsl(231deg, 69%, 60%);
+  border: 2px hsl(231deg, 69%, 60%) solid;
+}
+.cta__button--soft {
+  background-color: #e3e4e8;
+  color: #666666;
+  border: 2px #e3e4e8 solid;
+}
+.cta__button--soft:hover {
+  color: #485489;
+  border: 2px #485489 solid;
+}
+
+.download .cards {
+  padding: 50px 6%;
+}
+.download .cards__card {
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px #e3e4e8;
+  margin-bottom: 50px;
+}
+.download .cards img {
+  width: 100%;
+  margin: auto;
+}
+.download .cards__button {
+  padding: 6% 8% 8% 8%;
+}
+.download .cards .browser {
+  width: 100px;
+  margin: 30px 0 20px 0;
+}
+.download .cta__button {
+  width: 85%;
+  display: block;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 100px;
+}
+header img {
+  width: 100%;
+}
+header h1 {
+  padding-top: 40px 10%;
+}
+header p {
+  padding: 20px 10%;
+}
+
+#menu {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 12% 10%;
-  height: 100vh;
-  background-color: rgba(37, 43, 70, 0.9);
+  padding: 12% 10% 20% 10%;
+  height: 0;
+  transition: height 400ms ease-in-out;
   text-align: center;
 }
-nav .nav-icons {
+#menu .menu__icons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-nav ul {
-  display: flex;
+#menu ul {
   flex-direction: column;
   margin-top: 35px;
 }
-nav ul li,
-nav ul a {
+#menu ul li,
+#menu ul a {
   text-transform: uppercase;
   font-size: 18px;
   letter-spacing: 2px;
   color: white;
 }
-nav ul li {
+#menu ul li {
   font-weight: 400;
   padding: 25px;
   border-top: white 1px solid;
 }
-nav ul li:nth-child(3) {
+#menu ul li:nth-child(3) {
   border-bottom: white 1px solid;
   margin-bottom: 30px;
 }
-nav ul button {
+#menu ul button {
   background-color: transparent;
   padding: 10px;
   border-radius: 5px;
   border: white 2.5px solid;
 }
-nav ul button a {
+#menu ul button a {
   font-weight: 500;
 }
-nav img {
-  align-self: flex-start;
+#menu img {
+  align-self: center;
+}
+#menu.active {
+  background-color: rgba(37, 43, 70, 0.9);
+  height: 100vh;
+}
+#menu.active ul {
+  display: flex;
+}
+#menu.active #burger span {
+  background-color: transparent;
+}
+#menu.active #burger span::before {
+  transform: rotateZ(-45deg);
+  background-color: white;
+}
+#menu.active #burger span::after {
+  transform: rotateZ(45deg);
+  background-color: white;
+}
+#menu.active img {
   filter: brightness(100);
 }
 
@@ -85,6 +208,7 @@ nav img {
   height: 3px;
   width: 100%;
   display: block;
+  transition: background-color 200ms ease-in-out;
 }
 #burger span::after, #burger span::before {
   position: absolute;
@@ -92,6 +216,7 @@ nav img {
   width: 100%;
   height: 3px;
   background-color: black;
+  transition: all 400ms ease-in-out;
 }
 #burger span::after {
   content: "";
@@ -113,38 +238,47 @@ nav img {
   background-color: white;
 }
 
-/* SOCIALS DANS LE MENU MOBILE */
-.social {
-  position: fixed;
-  top: 550px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.social a:first-child {
-  padding-right: 35px;
-}
-
 /* DESKTOP */
 @media screen and (min-width: 900px) {
-  nav {
+  #menu {
     flex-direction: row;
     justify-content: space-between;
     padding: 12% 8%;
   }
-  nav ul {
+  #menu ul {
+    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    margin: 0;
   }
-  nav ul li {
+  #menu ul li {
     padding: 0 10px;
     font-size: 13px;
     color: hsl(229deg, 31%, 21%);
     border: 0;
   }
-  nav ul img {
+  #menu ul li:nth-child(3) {
+    margin: 0;
+  }
+  #menu ul img {
     height: 25px;
   }
+  #burger {
+    display: none;
+  }
+}
+#social {
+  /* SOCIALS DANS LE MENU MOBILE */
+}
+#social.active {
+  position: fixed;
+  top: 550px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#social.active a:first-child {
+  padding-right: 35px;
 }
 
 /*# sourceMappingURL=style.css.map */

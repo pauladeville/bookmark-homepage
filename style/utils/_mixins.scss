@@ -3,4 +3,9 @@
     @media screen and (min-width: $desktop-size) {
         @content
     }
-}
+};
+
+/* SHADOWS */
+@mixin shadow($color){
+  box-shadow: 0 6px 10px $color;
+};

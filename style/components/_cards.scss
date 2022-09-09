@@ -1,0 +1,27 @@
+.download{
+  .cards{
+    padding: 50px map-get($paddingX, mini);
+    &__card{
+      text-align: center;
+      border-radius: 15px;
+      @include shadow(lighten($grayish-blue,30));
+      margin-bottom: 50px;
+    }
+    img{
+      width: 100%;
+      margin: auto;
+    }
+    &__button{
+      padding: 6% 8% 8% 8%;
+    }
+    .browser{
+      width: 100px;
+      margin: 30px 0 20px 0;
+    }
+  }
+  .cta__button{
+    width: calc(85%);
+    display: block;
+    margin: auto;
+  }
+}

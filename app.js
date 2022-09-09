@@ -1,4 +1,7 @@
 const burger = document.getElementById("burger");
+const nav = document.getElementById("menu");
+const socialIcons = document.getElementById("social");
 burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
+  nav.classList.toggle("active");
+  socialIcons.classList.toggle("active");
 });

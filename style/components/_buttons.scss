@@ -1,0 +1,29 @@
+.cta{
+  &__button{
+      padding: 8px 18px;
+      background-color: $soft-blue;
+      color: white;
+      font-weight: 500;
+      border-radius: 5px;
+      border: 2px $soft-blue solid;
+      margin: 6px;
+      display: inline-block;
+      @include shadow(lighten($soft-blue,30));
+      transition: background-color 300ms ease-in-out;
+      &:hover{
+        background-color: white;
+        color: $soft-blue;
+        border: 2px $soft-blue solid;
+      }
+      &--soft{
+        background-color: lighten($grayish-blue, 30);
+        color: lighten(black, 40);
+        border: 2px lighten($grayish-blue, 30) solid;
+        &:hover{
+          color: lighten($very-dark-blue, 20);
+          border: 2px lighten($very-dark-blue, 20) solid;
+        }
+  
+      }
+  };
+}

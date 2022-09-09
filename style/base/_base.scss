@@ -8,3 +8,7 @@ ul{
 a {
     text-decoration: none;
 }
+section{
+    padding: 25px map-get($paddingX,small);
+    text-align: center;
+}

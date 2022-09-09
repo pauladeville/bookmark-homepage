@@ -1,0 +1,12 @@
+#social {
+/* SOCIALS DANS LE MENU MOBILE */
+  &.active{
+    position: fixed;
+    top: 550px;
+    left: 50%;
+    transform: translateX(-50%);
+    a:first-child {
+      padding-right: 35px;
+    }
+  }
+}
