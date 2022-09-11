@@ -24,3 +24,17 @@ function showSlide(slideIndex) {
   links[slideIndex].classList.add("active");
 }
 showSlide(slideIndex);
+/* ACCORDION FAQ */
+const questions = document.getElementsByClassName("accordion__question");
+for(let question of questions){
+  question.addEventListener("click", () => {
+    question.classList.toggle("active");
+    let answer = question.nextElementSibling;
+    if(answer.style.maxHeight){
+      answer.style.maxHeight = null;
+    } else {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    }
+    
+  })
+}

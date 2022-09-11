@@ -11,6 +11,10 @@ a {
 section {
     text-align: center;
 }
-p {
+p{
     padding: 0 map-get($paddingX, small);
+}
+h2{
+    padding: 0 map-get($paddingX, wide);
+
 }

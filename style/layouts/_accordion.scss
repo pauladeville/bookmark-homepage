@@ -1,0 +1,44 @@
+.accordion{
+  padding: 60px 40px 40px 40px;
+
+  &__question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-top: lighten($grayish-blue,32) 2px solid;
+    text-align: left;
+    &:first-child{
+      border-top: 0;
+    }
+    &:nth-child(7){
+      border-bottom: lighten($grayish-blue,32) 2px solid;
+    }
+    p{
+      padding: 10px 0 0 0;
+      color: $very-dark-blue;
+    }
+    img{
+      width: 15px;
+      height: 10px;
+      transition: transform 300ms ease-in-out;
+    }
+    &.active{
+      img{
+        transform: rotateX(180deg);
+      }
+    }
+  
+  }
+  &__answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 400ms ease-in-out;
+    p{
+      text-align: left;
+      font-size: 14px;
+      padding: 15px 0 30px 0;
+    }
+  }
+
+}
