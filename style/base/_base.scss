@@ -8,7 +8,9 @@ ul{
 a {
     text-decoration: none;
 }
-section{
-    padding: 25px map-get($paddingX,small);
+section {
     text-align: center;
+}
+p {
+    padding: 0 map-get($paddingX, small);
 }

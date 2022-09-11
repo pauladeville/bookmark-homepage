@@ -8,16 +8,31 @@ input,
 .newsletter p {
   font-size: 18px;
 }
+p{
+  font-size: 15px;
+}
+.cta__button, .cta__button--soft{
+  font-size: 13px;
+
+}
 p,
 .cta__button,
 .cta__button--soft {
-  font-size: 15px;
   line-height: 25px;
   color: $grayish-blue;
   text-align: center;
 }
+
+section li {
+  color: $grayish-blue;
+  font-weight: 500;
+  &:hover{
+    color: darken($grayish-blue, 30);
+  }
+}
 h1 {
   font-size: 30px;
+  font-weight: 500;
 }
 h1, h2, h3 {
     color: $very-dark-blue;
@@ -25,10 +40,8 @@ h1, h2, h3 {
 }
 h2{
     font-size: 22px;
-    padding: 15px;
+    padding-bottom: 12px;
 }
 h3{
-  font-size: 20px;
-  padding: 10px;
+  font-size: 22px;
 }
-

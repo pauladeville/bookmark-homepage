@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 12% 10% 20% 10%;
+  padding: 12% 10% 12% 10%;
   height: 0;
   transition: height 400ms ease-in-out;
   text-align: center;
@@ -31,13 +31,7 @@
       }
     }
     button {
-      background-color: transparent;
-      padding: 10px;
-      border-radius: 5px;
-      border: white 2.5px solid;
-      a {
-        font-weight: 500;
-      }
+      display: none;
     }
   }
   img {
@@ -144,6 +138,17 @@
       img {
         height: 25px;
       }
+      button {
+        display: inline-block;
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 5px;
+        border: white 2.5px solid;
+        a {
+          font-weight: 500;
+        }
+      }
+  
     }
   }
   #burger{

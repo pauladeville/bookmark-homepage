@@ -19,8 +19,11 @@ a {
 }
 
 section {
-  padding: 25px 8%;
   text-align: center;
+}
+
+p {
+  padding: 0 8%;
 }
 
 * {
@@ -32,17 +35,33 @@ input,
   font-size: 18px;
 }
 
+p {
+  font-size: 15px;
+}
+
+.cta__button, .cta__button--soft {
+  font-size: 13px;
+}
+
 p,
 .cta__button,
 .cta__button--soft {
-  font-size: 15px;
   line-height: 25px;
   color: hsl(229deg, 8%, 60%);
   text-align: center;
 }
 
+section li {
+  color: hsl(229deg, 8%, 60%);
+  font-weight: 500;
+}
+section li:hover {
+  color: #464953;
+}
+
 h1 {
   font-size: 30px;
+  font-weight: 500;
 }
 
 h1, h2, h3 {
@@ -52,12 +71,11 @@ h1, h2, h3 {
 
 h2 {
   font-size: 22px;
-  padding: 15px;
+  padding-bottom: 12px;
 }
 
 h3 {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 22px;
 }
 
 .cta__button {
@@ -88,7 +106,7 @@ h3 {
 }
 
 .download .cards {
-  padding: 50px 6%;
+  padding: 50px 12%;
 }
 .download .cards__card {
   text-align: center;
@@ -100,8 +118,21 @@ h3 {
   width: 100%;
   margin: auto;
 }
+.download .cards img.dots {
+  height: 4px;
+}
+.download .cards h3 {
+  margin: 8px;
+  font-size: 18px;
+}
+.download .cards p {
+  margin-bottom: 20px;
+}
 .download .cards__button {
-  padding: 6% 8% 8% 8%;
+  padding: 25px;
+}
+.download .cards__button a {
+  font-size: 13px;
 }
 .download .cards .browser {
   width: 100px;
@@ -113,25 +144,45 @@ h3 {
   margin: auto;
 }
 
+.shape {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  z-index: 4;
+  background-color: hsl(231deg, 69%, 60%);
+  width: 80%;
+  height: 35%;
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+}
+
 header {
   text-align: center;
-  padding-bottom: 100px;
+  margin: 50px 0 135px 0;
+  padding-top: 80%;
+  /*SHAPE RELATIVE*/
+  position: relative;
 }
 header img {
-  width: 100%;
+  width: 95%;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 header h1 {
-  padding-top: 40px 10%;
+  padding: 0 10%;
 }
 header p {
-  padding: 20px 10%;
+  padding: 20px 10% 25px 10%;
 }
 
 #menu {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 12% 10% 20% 10%;
+  padding: 12% 10% 12% 10%;
   height: 0;
   transition: height 400ms ease-in-out;
   text-align: center;
@@ -162,13 +213,7 @@ header p {
   margin-bottom: 30px;
 }
 #menu ul button {
-  background-color: transparent;
-  padding: 10px;
-  border-radius: 5px;
-  border: white 2.5px solid;
-}
-#menu ul button a {
-  font-weight: 500;
+  display: none;
 }
 #menu img {
   align-self: center;
@@ -264,10 +309,90 @@ header p {
   #menu ul img {
     height: 25px;
   }
+  #menu ul button {
+    display: inline-block;
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    border: white 2.5px solid;
+  }
+  #menu ul button a {
+    font-weight: 500;
+  }
   #burger {
     display: none;
   }
 }
+.slider__menu {
+  padding: 35px 8% 70px 8%;
+}
+.slider__menu li {
+  position: relative;
+  padding: 20px;
+  border-top: #e3e4e8 1px solid;
+  transition: color 300ms ease-in-out;
+}
+.slider__menu li:last-child {
+  border-bottom: #e3e4e8 1px solid;
+}
+.slider__menu li::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  display: block;
+  content: "";
+  width: 0;
+  transition: width 300ms ease-in-out;
+  height: 4px;
+  background-color: hsl(0deg, 94%, 66%);
+}
+.slider__menu li.active::after {
+  width: 130px;
+}
+
+.slider__slide {
+  display: none;
+  flex-direction: column;
+}
+.slider__slide .flex-img {
+  /* SHAPE RELATIVE */
+  position: relative;
+}
+.slider__slide .flex-img img {
+  width: 85%;
+  z-index: 5;
+  position: relative;
+}
+.slider__slide .flex-img .shape {
+  transform: rotate(180deg);
+  left: 0;
+  top: 17%;
+  height: 100%;
+}
+.slider__slide .flex-text {
+  padding: 22% 8% 130px 8%;
+}
+.slider__slide .flex-text p {
+  padding: 0;
+}
+.slider__slide .flex-text h3 {
+  padding-bottom: 12px;
+}
+.slider__slide .flex-text .cta__button {
+  display: none;
+}
+.slider__slide.shown {
+  display: flex;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 900px) {
+  .slider__slide .cta__button {
+    display: inline-block;
+  }
+}
+
 #social {
   /* SOCIALS DANS LE MENU MOBILE */
 }

@@ -33,6 +33,7 @@
 
       <header>
         <img src="images/illustration-hero.svg" alt="" />
+        <div class="shape"></div>
         <h1>A Simple Bookmark Manager</h1>
         <p>
           A clean and simple interface to organize your favourite websites. Open
@@ -53,38 +54,59 @@
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
-        <div class="slider">
+        <div class="slider__menu">
+          <ul>
+            <li class="slider__links" onclick="showSlide(0)">Simple Bookmarking</li>
+            <li class="slider__links" onclick="showSlide(1)">Speedy Searching</li>
+            <li class="slider__links" onclick="showSlide(2)">Easy Sharing</li>
+          </ul>
+        </div>
+        <div class="slider__container">
+
           <div class="slider__slide">
-            <h3>Bookmark in one click</h3>
-            <p>
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
-            <a class="cta__button">More Info</a>
+            <div class="flex-img">
+              <img src="images/illustration-features-tab-1.svg" alt="" />
+              <div class="shape"></div>
+            </div>
+            <div class="flex-text">
+              <h3>Bookmark in one click</h3>
+              <p>
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <a class="cta__button">More Info</a>
+            </div>
           </div>
+
           <div class="slider__slide">
-            <h3>Intelligent search</h3>
-            <p>
-              Our powerful search feature will help you find saved sites in no
-              time at all. No need to trawl through all of your bookmarks.
-            </p>
-            <a class="cta__button">More Info</a>
+            <div class="flex-img">
+              <img src="images/illustration-features-tab-2.svg" alt="" />
+              <div class="shape"></div>
+            </div>
+            <div class="flex-text">
+              <h3>Intelligent search</h3>
+              <p>
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <a class="cta__button">More Info</a>
+            </div>
           </div>
+
           <div class="slider__slide">
-            <h3>Share your bookmarks</h3>
-            <p>
-              Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <a class="cta__button">More Info</a>
-          </div>
-          <div class="slider_menu">
-            <ul>
-              <li>Simple Bookmarking</li>
-              <li>Speedy Searching</li>
-              <li>Easy Sharing</li>
-            </ul>
+            <div class="flex-img">
+              <img src="images/illustration-features-tab-3.svg" alt="" />
+              <div class="shape"></div>
+            </div>
+            <div class="flex-text">
+              <h3>Share your bookmarks</h3>
+              <p>
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <a class="cta__button">More Info</a>
+            </div>
           </div>
         </div>
       </section>
@@ -97,16 +119,16 @@
         </p>
         <div class="cards">
           <div class="cards__card">
-            <img class="browser" src="images/logo-chrome.svg" alt="">
+            <img class="browser" src="images/logo-chrome.svg" alt="" />
             <h3>Add to Chrome</h3>
             <p>Minimum version 62</p>
-            <img src="images/bg-dots.svg" alt="" />
+            <img class="dots" src="images/bg-dots.svg" alt="" />
             <div class="cards__button">
               <a class="cta__button">Add & Install Extension</a>
             </div>
           </div>
           <div class="cards__card">
-            <img class="browser" src="images/logo-firefox.svg" alt="">
+            <img class="browser" src="images/logo-firefox.svg" alt="" />
 
             <h3>Add to Firefox</h3>
             <p>Minimum version 55</p>
@@ -115,7 +137,7 @@
             </div>
           </div>
           <div class="cards__card">
-            <img class="browser" src="images/logo-opera.svg" alt="">
+            <img class="browser" src="images/logo-opera.svg" alt="" />
 
             <h3>Add to Opera</h3>
             <p>Minimum version 46</p>

@@ -1,6 +1,6 @@
 .download{
   .cards{
-    padding: 50px map-get($paddingX, mini);
+    padding: 50px map-get($paddingX, extra);
     &__card{
       text-align: center;
       border-radius: 15px;
@@ -10,9 +10,23 @@
     img{
       width: 100%;
       margin: auto;
+      &.dots{
+        height: 4px;
+      }
+    }
+    h3{
+      margin: 8px;
+      font-size: 18px;
+    }
+    p{
+      margin-bottom: 20px;
     }
     &__button{
-      padding: 6% 8% 8% 8%;
+      padding: 25px;
+      a{
+        font-size: 13px;
+
+      }
     }
     .browser{
       width: 100px;
