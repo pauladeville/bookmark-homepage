@@ -38,3 +38,15 @@ for(let question of questions){
     
   })
 }
+/*EMAIL VALIDATION*/
+function ValidateEmail(inputText){
+  let mailFormat = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+  let emailInput = document.querySelector("form[name=subs] input[name=email]");
+  let errorMsg = document.getElementById("error-msg");
+  if(inputText.value.match(mailFormat)){
+    emailInput.classList.add("error");
+    errorMsg.classList.add("shown")
+  } else {
+    console.log("passed")
+  }
+}

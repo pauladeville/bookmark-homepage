@@ -4,14 +4,16 @@
   justify-content: flex-start;
   padding: 12% 10% 12% 10%;
   height: 0;
-  transition: height 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
   text-align: center;
+  background-color: white;
   .menu__icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   ul {
+    display: none;
     flex-direction: column;
     margin-top: 35px;
     li,
@@ -24,14 +26,22 @@
     li {
       font-weight: 400;
       padding: 25px;
-      border-top: white 1px solid;
+      border-top: rgba(white, 0.2) 1px solid;
       &:nth-child(3) {
-        border-bottom: white 1px solid;
+        border-bottom: rgba(white, 0.2) 1px solid;
         margin-bottom: 30px;
       }
     }
     button {
-      display: none;
+      background-color: transparent;
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: white 2.5px solid;
+      a {
+        font-weight: 500;
+      }
+
     }
   }
   img {
@@ -40,7 +50,6 @@
   &.active {
     background-color: rgba($very-dark-blue, 0.9);
     height: 100vh;
-
     ul {
       display: flex;
     }
@@ -117,7 +126,7 @@
   #menu {
     flex-direction: row;
     justify-content: space-between;
-    padding: 12% 8%;
+    padding: 5% 8%;
     ul {
       display: flex;
       flex-direction: row;
@@ -125,26 +134,27 @@
       align-items: center;
       margin: 0;
       li {
-        padding: 0 10px;
+        padding: 0 30px;
         font-size: 13px;
         color: $very-dark-blue;
         border: 0;
-        
         &:nth-child(3) {
           margin: 0;
         }
-
       }
       img {
         height: 25px;
       }
       button {
         display: inline-block;
-        background-color: transparent;
-        padding: 10px;
+        background-color: $soft-red;
+        padding: 12px 30px;
+        margin-left: 20px;
         border-radius: 5px;
-        border: white 2.5px solid;
-        a {
+        border: 0;
+        @include shadow(rgba($grayish-blue, 0.3));
+        a{
+          font-size: 13px;
           font-weight: 500;
         }
       }

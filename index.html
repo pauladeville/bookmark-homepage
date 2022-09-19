@@ -56,13 +56,16 @@
         </p>
         <div class="slider__menu">
           <ul>
-            <li class="slider__links" onclick="showSlide(0)">Simple Bookmarking</li>
-            <li class="slider__links" onclick="showSlide(1)">Speedy Searching</li>
+            <li class="slider__links" onclick="showSlide(0)">
+              Simple Bookmarking
+            </li>
+            <li class="slider__links" onclick="showSlide(1)">
+              Speedy Searching
+            </li>
             <li class="slider__links" onclick="showSlide(2)">Easy Sharing</li>
           </ul>
         </div>
         <div class="slider__container">
-
           <div class="slider__slide">
             <div class="flex-img">
               <img src="images/illustration-features-tab-1.svg" alt="" />
@@ -198,7 +201,9 @@
           </div>
           <div class="accordion__answer">
             <p>
-              Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.
+              Integer condimentum ipsum id imperdiet finibus. Vivamus in
+              placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+              pellentesque non ut velit.
             </p>
           </div>
         </div>
@@ -208,9 +213,12 @@
       <section class="newsletter">
         <p>35,000+ already joined</p>
         <h2>Stay up-to-date with what we’re doing</h2>
-        <form action="">
-          <input type="email" placeholder="Enter your email address" />
-          <input type="submit" value="Contact us" />
+        <form name="subs" action="#">
+          <input name="email" type="email" placeholder="Enter your email address" />
+          <div id="error-msg">
+            Whoops, make sure it's an email
+          </div>
+          <input type="submit" value="Contact us" onclick="ValidateEmail(document.subs.email)"/>
         </form>
       </section>
 
