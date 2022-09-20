@@ -11,6 +11,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    svg {
+      path {
+        transition: fill 300ms ease-in-out;
+      }
+      circle {
+        transition: fill 300ms ease-in-out;
+      }
+      g g path {
+        transition: fill 300ms ease-in-out;
+      }
+    }
+
   }
   ul {
     display: none;

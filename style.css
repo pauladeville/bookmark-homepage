@@ -456,6 +456,15 @@ header .cta {
   justify-content: space-between;
   align-items: center;
 }
+#menu .menu__icons svg path {
+  transition: fill 300ms ease-in-out;
+}
+#menu .menu__icons svg circle {
+  transition: fill 300ms ease-in-out;
+}
+#menu .menu__icons svg g g path {
+  transition: fill 300ms ease-in-out;
+}
 #menu ul {
   display: none;
   flex-direction: column;
