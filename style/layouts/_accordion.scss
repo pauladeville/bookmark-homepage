@@ -17,15 +17,14 @@
       padding: 10px 0 0 0;
       color: $very-dark-blue;
       cursor: pointer;
-      &:hover{
+      &:hover {
         color: $soft-red;
       }
-  
     }
     svg {
       transition: transform 300ms ease-in-out;
       cursor: pointer;
-      path{
+      path {
         transition: stroke 300ms ease-in-out;
       }
     }
@@ -33,7 +32,7 @@
       svg {
         transform: rotateX(180deg);
         path {
-          stroke: #FA5757;
+          stroke: #fa5757;
         }
       }
     }
@@ -50,16 +49,15 @@
   }
 }
 
-@media screen and (min-width:$desktop-size) {
-  .accordion{
+@media screen and (min-width: $desktop-size) {
+  .accordion {
     width: 48%;
     margin: auto;
-    &__question{
+    &__question {
       padding: 18px 0;
-      p{
+      p {
         padding-top: 5px;
       }
     }
   }
-  
 }

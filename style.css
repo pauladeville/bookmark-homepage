@@ -262,7 +262,7 @@ h3 {
   transform: rotateX(180deg);
 }
 .accordion__question.active svg path {
-  stroke: #FA5757;
+  stroke: #fa5757;
 }
 .accordion__answer {
   max-height: 0;
@@ -487,9 +487,6 @@ header .cta {
 #menu ul button a {
   font-weight: 500;
 }
-#menu img {
-  align-self: center;
-}
 #menu.active {
   background-color: rgba(37, 43, 70, 0.9);
   height: 100vh;
@@ -508,8 +505,14 @@ header .cta {
   transform: rotateZ(45deg);
   background-color: white;
 }
-#menu.active img {
-  filter: brightness(100);
+#menu.active svg path {
+  fill: white;
+}
+#menu.active svg circle {
+  fill: white;
+}
+#menu.active svg g g path {
+  fill: #3a3f58;
 }
 
 #burger {
@@ -739,6 +742,9 @@ footer {
   align-items: center;
   text-align: center;
 }
+footer .menu {
+  margin: 15px 0;
+}
 footer .menu svg path {
   fill: white;
 }
@@ -756,10 +762,13 @@ footer li:hover {
 }
 
 #social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   /* SOCIALS DANS LE MENU MOBILE */
 }
 #social svg {
-  margin-left: 40px;
+  margin: 0 20px;
 }
 #social svg path {
   transition: fill 300ms ease-in-out;
@@ -772,9 +781,6 @@ footer li:hover {
   top: 550px;
   left: 50%;
   transform: translateX(-50%);
-}
-#social.active a:first-child {
-  padding-right: 35px;
 }
 
 @media screen and (min-width: 900px) {

@@ -41,11 +41,7 @@
       a {
         font-weight: 500;
       }
-
     }
-  }
-  img {
-    align-self: center;
   }
   &.active {
     background-color: rgba($very-dark-blue, 0.9);
@@ -67,9 +63,16 @@
         background-color: white;
       }
     }
-    img{
-      filter: brightness(100);
-
+    svg {
+      path {
+        fill: white;
+      }
+      circle {
+        fill: white;
+      }
+      g g path {
+        fill: #3a3f58;
+      }
     }
   }
 }
@@ -143,10 +146,9 @@
         &:nth-child(3) {
           margin: 0;
         }
-        &:hover{
+        &:hover {
           color: $soft-red;
         }
-  
       }
       img {
         height: 25px;
@@ -160,25 +162,23 @@
         border-radius: 5px;
         border: $soft-red 2px solid;
         @include shadow(rgba($grayish-blue, 0.3));
-        a{
+        a {
           font-size: 13px;
           font-weight: 500;
           transition: color 200ms ease-in-out;
-
         }
         transition: all 300ms ease-in-out;
-        &:hover{
+        &:hover {
           background-color: transparent;
           border: $soft-red 2px solid;
-          a{
+          a {
             color: $soft-red;
           }
         }
       }
-  
     }
   }
-  #burger{
+  #burger {
     display: none;
   }
 }
