@@ -1,3 +1,6 @@
+.slider__container {
+  margin-bottom: 15px;
+}
 .slider__menu {
   padding: 35px map-get($paddingX, small) 70px map-get($paddingX, small);
   li {
@@ -16,11 +19,12 @@
       display: block;
       content: "";
       width: 0;
-      transition: width 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
       height: 4px;
       background-color: $soft-red;
     }
     &.active {
+      color: darken($grayish-blue, 30);
       &::after {
         width: 130px;
       }
@@ -38,12 +42,6 @@
       z-index: 5;
       position: relative;
     }
-    .shape {
-      transform: rotate(180deg);
-      left: 0;
-      top: 17%;
-      height: 100%;
-    }
   }
   .flex-text {
     padding: 22% map-get($paddingX, small) 130px map-get($paddingX, small);
@@ -53,18 +51,67 @@
     h3 {
       padding-bottom: 12px;
     }
-    .cta__button {
-      display: none;
-    }
   }
   &.shown {
     display: flex;
   }
+  .cta__button {
+    display: none;
+  }
 }
 
-/* DESKTOP */
-.slider__slide {
-  @include desktop {
+@media screen and (min-width: $desktop-size) {
+  .slider__menu {
+    ul {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    li {
+      border-top: 0;
+      border-bottom: lighten($grayish-blue, 30) 1px solid;
+      padding-left: 50px;
+      padding-right: 50px;
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .slider__slide {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 200px;
+    .flex-text {
+      padding: 0;
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        text-align: left;
+        margin: 20px 0 30px 0;
+        font-size: 16px;
+        width: 60%;
+      }
+      a {
+        margin: 0;
+      }
+    }
+    .flex-img {
+      flex: 1.2;
+      img {
+        width: 65%;
+      }
+    }
     .cta__button {
       display: inline-block;
     }

@@ -1,44 +1,65 @@
-.accordion{
-  padding: 60px 40px 40px 40px;
-
-  &__question{
+.accordion {
+  padding: 60px 40px 50px 40px;
+  &__question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
-    border-top: lighten($grayish-blue,32) 2px solid;
+    padding: 20px 0;
+    border-top: lighten($grayish-blue, 32) 2px solid;
     text-align: left;
-    &:first-child{
+    &:first-child {
       border-top: 0;
     }
-    &:nth-child(7){
-      border-bottom: lighten($grayish-blue,32) 2px solid;
+    &:nth-child(7) {
+      border-bottom: lighten($grayish-blue, 32) 2px solid;
     }
-    p{
+    p {
       padding: 10px 0 0 0;
       color: $very-dark-blue;
+      cursor: pointer;
+      &:hover{
+        color: $soft-red;
+      }
+  
     }
-    img{
-      width: 15px;
-      height: 10px;
+    svg {
       transition: transform 300ms ease-in-out;
-    }
-    &.active{
-      img{
-        transform: rotateX(180deg);
+      cursor: pointer;
+      path{
+        transition: stroke 300ms ease-in-out;
       }
     }
-  
+    &.active {
+      svg {
+        transform: rotateX(180deg);
+        path {
+          stroke: #FA5757;
+        }
+      }
+    }
   }
-  &__answer{
+  &__answer {
     max-height: 0;
     overflow: hidden;
     transition: all 400ms ease-in-out;
-    p{
+    p {
       text-align: left;
       font-size: 14px;
       padding: 15px 0 30px 0;
     }
   }
+}
 
+@media screen and (min-width:$desktop-size) {
+  .accordion{
+    width: 48%;
+    margin: auto;
+    &__question{
+      padding: 18px 0;
+      p{
+        padding-top: 5px;
+      }
+    }
+  }
+  
 }

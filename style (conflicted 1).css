@@ -759,13 +759,7 @@ footer li:hover {
   /* SOCIALS DANS LE MENU MOBILE */
 }
 #social svg {
-  margin-left: 40px;
-}
-#social svg path {
-  transition: fill 300ms ease-in-out;
-}
-#social svg path:hover {
-  fill: hsl(0deg, 94%, 66%);
+  margin-left: 15px;
 }
 #social.active {
   position: fixed;
@@ -780,7 +774,7 @@ footer li:hover {
 @media screen and (min-width: 900px) {
   footer {
     flex-direction: row;
-    padding: 35px 150px;
+    padding: 18px 150px;
   }
   footer .menu {
     display: flex;

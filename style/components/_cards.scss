@@ -1,41 +1,61 @@
-.download{
-  .cards{
+.download {
+  .cards {
     padding: 50px map-get($paddingX, extra);
-    &__card{
+    &__card {
       text-align: center;
       border-radius: 15px;
-      @include shadow(lighten($grayish-blue,30));
+      @include shadow(lighten($grayish-blue, 30));
       margin-bottom: 50px;
     }
-    img{
+    img {
       width: 100%;
       margin: auto;
-      &.dots{
+      &.dots {
         height: 4px;
       }
     }
-    h3{
+    h3 {
       margin: 8px;
       font-size: 18px;
     }
-    p{
+    p {
       margin-bottom: 20px;
     }
-    &__button{
+    &__button {
       padding: 25px;
-      a{
+      a {
         font-size: 13px;
-
       }
     }
-    .browser{
+    .browser {
       width: 100px;
       margin: 30px 0 20px 0;
     }
   }
-  .cta__button{
+  .cta__button {
     width: calc(85%);
     display: block;
     margin: auto;
+  }
+}
+
+@media screen and (min-width: $desktop-size) {
+  .download .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 18%;
+    margin-bottom: 120px;
+    height: 550px;
+    &__card {
+      width: 280px;
+      &:first-child {
+        align-self: flex-start;
+      }
+      &:last-child {
+        align-self: flex-end;
+      }
+    }
   }
 }

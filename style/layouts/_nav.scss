@@ -134,28 +134,45 @@
       align-items: center;
       margin: 0;
       li {
+        cursor: pointer;
         padding: 0 30px;
         font-size: 13px;
         color: $very-dark-blue;
         border: 0;
+        transition: color 300ms ease-in-out;
         &:nth-child(3) {
           margin: 0;
         }
+        &:hover{
+          color: $soft-red;
+        }
+  
       }
       img {
         height: 25px;
       }
       button {
+        cursor: pointer;
         display: inline-block;
         background-color: $soft-red;
         padding: 12px 30px;
         margin-left: 20px;
         border-radius: 5px;
-        border: 0;
+        border: $soft-red 2px solid;
         @include shadow(rgba($grayish-blue, 0.3));
         a{
           font-size: 13px;
           font-weight: 500;
+          transition: color 200ms ease-in-out;
+
+        }
+        transition: all 300ms ease-in-out;
+        &:hover{
+          background-color: transparent;
+          border: $soft-red 2px solid;
+          a{
+            color: $soft-red;
+          }
         }
       }
   

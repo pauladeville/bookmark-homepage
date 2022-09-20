@@ -1,4 +1,4 @@
-footer{
+footer {
   background-color: $very-dark-blue;
   padding: 10%;
   display: flex;
@@ -6,32 +6,68 @@ footer{
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  .menu{
-    img{
-      filter: brightness(100);
+  .menu {
+    svg {
+      path{
+        fill:white;
+      }
     }
   }
-  li{
+  li {
     text-transform: uppercase;
-    color: lighten($grayish-blue,10);
+    color: lighten($grayish-blue, 10);
     font-size: 14px;
     letter-spacing: 2px;
     margin: 35px 0;
     font-weight: 500;
+    cursor: pointer;
+    &:hover{
+      color: $soft-red;
+    }
   }
 }
 #social {
-  img{
-    padding: 15px;
+  svg {
+    margin-left: 40px;
+    path{
+      transition: fill 300ms ease-in-out;
+      &:hover{
+          fill:$soft-red;
+      }
+  
+    }
   }
-/* SOCIALS DANS LE MENU MOBILE */
-  &.active{
+  /* SOCIALS DANS LE MENU MOBILE */
+  &.active {
     position: fixed;
     top: 550px;
     left: 50%;
     transform: translateX(-50%);
     a:first-child {
       padding-right: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop-size) {
+  footer {
+    flex-direction: row;
+    padding: 35px 150px;
+    .menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+      ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li {
+        margin: 0 25px;
+      }
     }
   }
 }

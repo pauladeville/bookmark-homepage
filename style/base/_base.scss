@@ -1,21 +1,26 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-ul{
-    list-style-type: none;
+ul {
+  list-style-type: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 section {
-    text-align: center;
+  text-align: center;
 }
-p{
-    padding: 0 map-get($paddingX, small);
+h2 ~ p {
+  padding: 0 map-get($paddingX, small);
+  @include desktop{
+        padding: 15px 0 25px 0;
+        width: 40%;
+        margin: auto;
+  
+  }
 }
-h2{
-    padding: 0 map-get($paddingX, wide);
-
+h2 {
+  padding: 0 map-get($paddingX, wide);
 }
